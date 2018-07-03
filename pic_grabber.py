@@ -1,4 +1,5 @@
 import tkinter as tk
+import console_grab
 
 window = tk.Tk()
 
@@ -14,7 +15,9 @@ entry.insert(0, 'URL')
 
 
 def pressed():
-    print("button")
+    entered_url = entry.get()
+    print(entered_url)
+    console_grab.get_images(entered_url)
 
 
 tk.Button(window, text='Get Pics', command=pressed).place(x=110, y=200)
