@@ -15,9 +15,12 @@ entry.insert(0, 'URL')
 
 
 def pressed():
-    entered_url = entry.get()
-    print(entered_url)
-    console_grab.get_images(entered_url)
+    try:
+        entered_url = entry.get()
+        print(entered_url)
+        console_grab.get_images(entered_url)
+    except RuntimeError:
+        print("Unable to locate files")
 
 
 tk.Button(window, text='Get Pics', command=pressed).place(x=110, y=200)
