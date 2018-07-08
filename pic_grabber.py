@@ -1,6 +1,7 @@
 import tkinter as tk
 import console_grab
 
+# Window GUI
 window = tk.Tk()
 
 window.title("Pic Grabber")
